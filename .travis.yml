@@ -1,13 +1,17 @@
 language: java
-
 jdk:
-    - openjdk7
-    - openjdk8
-    
+- openjdk7
+- openjdk8
 notifications:
-    email:
-        recepients:
-            - ignalelop@alum.us.es
-        on_sucess: never
-        on_failure: never
-        
+  email:
+    recepients:
+    - ignalelop@alum.us.es
+    on_sucess: never
+    on_failure: never
+deploy:
+  provider: heroku
+  api_key:
+    secure: YxBtJyaU2pSADXahGE1/tmFqF8azwFygFpvkqqJu5DqFBewj1x1lEX75C/G12klXjtSu1mlX7TWHonDbo9whdZX5H+LAsHhAwxBejBmcyHxjRXny38rOR30ipQxol/jfTLJS48jdnm9cD3d3+6Kd6JQS36KjfLWue44UZ/64xGybFoGFZKkZJpCAVVd2/5HqRNgVYM9p2ThRPQW/Z0y20ElXleGMyc875RFEvsUC/WZY7679WJJbBowXq7d6IVSM8CWmxd3fw8jDerFIUgJ0hGQfKxssUBdG1zaBq8NOEDhZGr+L13a8XupZA5JC3aKmtZZX+WDjdc1UVANllIngFsQfXKNEfoCDUwYVXTNrFSyyaU/u7WQUa1F6vaUva8qvL5RtwhYSFqnlzsiPDS6kXkMjprj7joVlAMDE+3oT43Z3CXgN1c6giJkYEwLlOPWiOIe9HyAY2ShlHKfBJf7igtWWHVS0JApG0yglgoQkKc39UjSRgdbStLV+Yyrc1C+Y+oZ3JpL76ExHej+BJ2jl8o2LQ+BJkQ+y+k75itoqvgaAeF32zkIwGrDmj4rNbMD07t9FH95PJ/XrirGRB58gLIoZNAdOmRDWsXvx/31tDRY4wzvlv0k+M1JZvTfkRY07TVwyh1bVd25fmQQ9FsJqLrGQZaf7DW1SfEtHC1VCttI=
+  app: greetings-java
+  on:
+    repo: DinossoLatte/greeting-java
